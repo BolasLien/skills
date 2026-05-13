@@ -12,6 +12,7 @@ This repository contains Claude Code plugin skills.
 - `.codex-plugin/` should only contain `plugin.json`.
 - Skills live in `skills/<skill-name>/SKILL.md`.
 - Optional human-facing skill usage docs may live in `skills/<skill-name>/README.md`.
+- English is the default skill README language. Localized skill docs may use `README.<locale>.md`, for example `README.zh-TW.md`.
 - Skill UI metadata may live in `skills/<skill-name>/agents/openai.yaml`.
 - Skill names use kebab-case.
 - Shared references live in `references/`.
@@ -29,6 +30,7 @@ This repository contains Claude Code plugin skills.
 - Keep `SKILL.md` concise.
 - Move long examples, templates, and detailed references into separate files.
 - Keep skill-level `README.md` human-facing; do not rely on it for agent trigger behavior.
+- Keep localized README files separate from the default English README.
 - Use relative links from `SKILL.md`.
 
 ## Review Checklist

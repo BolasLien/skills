@@ -15,6 +15,7 @@ skills/
 └── <skill-name>/
     ├── SKILL.md
     ├── README.md
+    ├── README.zh-TW.md
     ├── agents/
     │   └── openai.yaml
     ├── references/
@@ -49,6 +50,7 @@ cd skills
 - Codex plugin metadata lives in `.codex-plugin/plugin.json`.
 - Skills live in `skills/<skill-name>/SKILL.md`.
 - Optional human-facing skill usage docs may live in `skills/<skill-name>/README.md`.
+- English is the default README language. Localized skill docs may use `README.<locale>.md`, for example `README.zh-TW.md`.
 - Skill UI metadata may live in `skills/<skill-name>/agents/openai.yaml`.
 - Skill folder names use kebab-case.
 - Every `SKILL.md` starts with YAML frontmatter containing `name` and `description`.
