@@ -14,6 +14,7 @@ README.md
 skills/
 └── <skill-name>/
     ├── SKILL.md
+    ├── README.md
     ├── agents/
     │   └── openai.yaml
     ├── references/
@@ -47,6 +48,7 @@ cd skills
 - Plugin metadata lives in `.claude-plugin/plugin.json`.
 - Codex plugin metadata lives in `.codex-plugin/plugin.json`.
 - Skills live in `skills/<skill-name>/SKILL.md`.
+- Optional human-facing skill usage docs may live in `skills/<skill-name>/README.md`.
 - Skill UI metadata may live in `skills/<skill-name>/agents/openai.yaml`.
 - Skill folder names use kebab-case.
 - Every `SKILL.md` starts with YAML frontmatter containing `name` and `description`.
