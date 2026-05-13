@@ -1,0 +1,21 @@
+{
+  "name": "skills",
+  "version": "0.1.0",
+  "description": "Reusable Codex and Claude Code agent skills for AI-assisted development workflows.",
+  "author": {
+    "name": "BolasLien",
+    "url": "https://github.com/BolasLien"
+  },
+  "repository": "https://github.com/BolasLien/skills",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Skills",
+    "shortDescription": "Reusable AI development workflow skills",
+    "developerName": "BolasLien",
+    "category": "Productivity",
+    "capabilities": ["Write"],
+    "defaultPrompt": [
+      "Use $codex-goal-writer to draft a durable /goal prompt."
+    ]
+  }
+}

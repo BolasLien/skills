@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codex Goal Writer"
+  short_description: "Draft structured Codex goal prompts"
+  default_prompt: "Use $codex-goal-writer to draft a durable /goal prompt for this task:"
+
+policy:
+  allow_implicit_invocation: true
