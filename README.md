@@ -65,3 +65,7 @@ cd skills
 ## Unresolved / Uncategorized
 
 No uncategorized content yet.
+
+## License
+
+MIT License. See [LICENSE](./LICENSE).
