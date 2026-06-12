@@ -32,6 +32,7 @@ Only directories with actual content need to exist. `.claude-plugin/` and `.code
 ## Skills
 
 - `codex-goal-writer`: Turns rough task intent into structured Codex CLI `/goal` prompts with explicit scope, validation, pause conditions, and stopping criteria.
+- `setup-serena`: Installs `serena-agent`, configures Serena MCP for Codex, enables hooks, and verifies cross-repo activation.
 
 ## Installation / Usage
 

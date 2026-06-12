@@ -1,0 +1,4 @@
+interface:
+  display_name: "Setup Serena"
+  short_description: "Install and configure Serena for Codex"
+  default_prompt: "Use $setup-serena to install Serena and configure it for Codex on this device."
