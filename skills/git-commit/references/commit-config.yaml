@@ -1,0 +1,62 @@
+# Commit Configuration
+
+# Conventional Commit Types and type-selection rules: see ../commit-types.md
+# (shared with glab-mr — do not duplicate that table here)
+
+# Scopes — replace with the target project's own module/directory names
+scopes:
+  ui: "UI 元件"
+  api: "API / 後端整合層"
+  core: "共用核心邏輯"
+  lib: "工具函式庫"
+  docs: "文件"
+  config: "設定 / 建置工具"
+  none: "跨模組或不限定 scope"
+
+# Commit Message Guidelines
+subject:
+  max_length: 50
+  language: "English"
+  rules:
+    - "One concise sentence"
+    - "Include quantitative hints (e.g., 2000+ icons)"
+    - "No period at the end"
+    - "No vague descriptions"
+
+body:
+  language: "English"
+  when_required:
+    - "Complex changes"
+    - "Refactors need justification"
+    - "Multiple related updates"
+  rules:
+    - "Describe both why and what"
+    - "Use bullet lists for key changes"
+    - "Call out technical decisions"
+    - "Break into paragraphs"
+
+# Commit Splitting Rules
+splitting:
+  split_when:
+    - "Independent components"
+    - "Different functional modules"
+    - "Refactor vs feature (if logic differs)"
+    - "Massive formatting diffs"
+
+  keep_together:
+    - "Component + its stories"
+    - "Component + its styles"
+    - "Component + its tests"
+    - "Coupled type definitions + implementation"
+    - "Frontend + backend of single feature"
+
+  decision_questions:
+    - "Do these changes solve the same problem?"
+    - "If I cherry-pick only one commit, will code still work?"
+    - "Can reviewer understand each commit independently?"
+  decision_rule: "If all yes → keep together. If any no → split."
+
+# Formatting
+formatting:
+  command: "<project formatter command, or \"none\">"
+  note: "Confirm whether the target project has a configured formatter before running one."

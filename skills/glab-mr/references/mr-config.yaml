@@ -1,0 +1,35 @@
+# MR Configuration
+
+# Conventional Commit Types and type-selection rules: see ../commit-types.md
+# (shared with git-commit — do not duplicate that table here)
+
+# Scopes — replace with the target project's own module/directory names
+scopes:
+  ui: "UI 元件"
+  api: "API / 後端整合層"
+  core: "共用核心邏輯"
+  lib: "工具函式庫"
+  docs: "文件"
+  config: "設定 / 建置工具"
+  none: "跨模組或不限定 scope"
+
+# Branch Naming Patterns
+branch_patterns:
+  feature:
+    prefix: "feature/"
+    example: "feature/alert-component"
+  fix:
+    prefix: "fix/"
+    example: "fix/badge-style-issue"
+  refactor:
+    prefix: "refactor/"
+    example: "refactor/badge-variants"
+  docs:
+    prefix: "docs/"
+    example: "docs/update-readme"
+
+# MR Size Guidelines
+mr_size:
+  recommended_files: "10-30"
+  recommended_lines: "200-500"
+  max_lines_warning: 1000
