@@ -46,6 +46,7 @@ Every skill is generic — none are tied to a specific repo. Grouped by what the
 - **[subagent-go](./skills/subagent-go/SKILL.md)** — Direct a bounded task to implementation/git subagents, stay out of the implementation itself, and independently audit evidence before accepting the result.
 - **[reject-and-redo](./skills/reject-and-redo/SKILL.md)** — Reject a task/PR delivery that claims completion without sufficient evidence against acceptance criteria, and require self-verification and re-delivery.
 - **[handoff-audit](./skills/handoff-audit/SKILL.md)** — Create, update, intake, and audit one human-readable handoff per transferable task under `docs/handoffs/<task-slug>.md`.
+- **[linear-task-lifecycle](./skills/linear-task-lifecycle/SKILL.md)** — Keep a referenced Linear issue synchronized with implementation, verification, interruption, and completion state.
 
 ### Codebase & Integrations
 

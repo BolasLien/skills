@@ -1,0 +1,4 @@
+interface:
+  display_name: "Linear Task Lifecycle"
+  short_description: "Manage Linear issue state throughout implementation"
+  default_prompt: "Manage the referenced Linear issue through its implementation lifecycle."
