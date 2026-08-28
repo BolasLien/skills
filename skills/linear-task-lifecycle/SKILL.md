@@ -66,6 +66,7 @@ If implementation is delivered but required verification is still outstanding, k
 
 ## Typical invocation
 
-`$implement BOL-5`
+- Claude Code and Antigravity CLI (`agy`): `/implement BOL-5`
+- Codex: `$implement BOL-5`
 
 The implementation skill handles the code workflow; this skill fetches `BOL-5`, maintains its lifecycle state, and records durable evidence.
