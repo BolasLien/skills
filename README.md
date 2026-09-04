@@ -50,6 +50,7 @@ Every skill is generic — none are tied to a specific repo. Grouped by what the
 
 ### Codebase & Integrations
 
+- **[code-comments](./skills/code-comments/SKILL.md)** — Write, review, and refactor code comments using rationale-first (Why-over-What) guidelines, stripping transient noise and documenting non-obvious constraints.
 - **[codebase-inventory](./skills/codebase-inventory/SKILL.md)** — Build and maintain an evidence-backed codebase architecture inventory using Repomix, Madge, ast-grep, Git, and ripgrep, with `create`/`update`/`query` commands.
 - **[jira-api](./skills/jira-api/SKILL.md)** — Query, create, transition, edit, and comment on Jira Cloud issues via a `scripts/jira.sh` CLI wrapper (curl + REST API v3 fallback).
 
