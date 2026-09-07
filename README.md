@@ -38,6 +38,7 @@ Every skill is generic — none are tied to a specific repo. Grouped by what the
 - **[git-commit](./skills/git-commit/SKILL.md)** — Standardize the Git commit workflow: change analysis, optional formatting, commit-message conventions, and commit-splitting strategy.
 - **[glab-mr](./skills/glab-mr/SKILL.md)** — Standardize the GitLab Merge Request workflow via `glab`: branch diff analysis, branch pushing, MR title/description conventions, create/update operations.
 - **[glab-mr-review](./skills/glab-mr-review/SKILL.md)** — Review a GitLab Merge Request via `glab`, grounded in the full MR-branch content, producing a findings-first report optionally posted as an MR comment.
+- **[wt](./skills/wt/SKILL.md)** — Manage the Git worktree lifecycle: allocate a development port, create and initialize a task worktree, start its dev server, and safely inspect and clean it up.
 
 ### Planning, Delivery & Handoff
 
