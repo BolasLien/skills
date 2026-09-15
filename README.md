@@ -42,6 +42,8 @@ Every skill is generic — none are tied to a specific repo. Grouped by what the
 
 ### Planning, Delivery & Handoff
 
+- **[autonomous-agent-orchestration](./skills/autonomous-agent-orchestration/SKILL.md)** — Coordinate an explicitly authorized implementation through Herdr with isolated Workers and fresh-context Reviewers.
+- **[implement-review-loop](./skills/implement-review-loop/SKILL.md)** — Implement an authorized task directly while using fresh independent Reviewers as quality gates.
 - **[generate-spec](./skills/generate-spec/SKILL.md)** — Draft a product/functional spec (PRD), choosing lite vs. standard templates and flagging unverified details instead of guessing.
 - **[codex-goal-writer](./skills/codex-goal-writer/SKILL.md)** — Turn rough task intent into a structured Codex CLI `/goal` prompt with explicit scope, validation, pause conditions, and stopping criteria.
 - **[subagent-go](./skills/subagent-go/SKILL.md)** — Direct a bounded task to implementation/git subagents, stay out of the implementation itself, and independently audit evidence before accepting the result.
