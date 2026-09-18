@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>功能名稱｜客服操作手冊</title>
+    <style>
+      :root {
+        --accent: #f73939;
+        --accent-soft: #fff1f1;
+        --ink: #242424;
+        --muted: #666;
+        --line: #e5e5e5;
+        --surface: #fff;
+        --surface-soft: #f7f7f7;
+        --warning: #8a5a00;
+        --warning-bg: #fff8e7;
+        --radius: 16px;
+        --shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--surface-soft);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+        line-height: 1.7;
+      }
+      a { color: inherit; }
+      img { display: block; max-width: 100%; }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        max-width: 1440px;
+        min-height: 100vh;
+        margin: 0 auto;
+      }
+      .sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding: 32px 24px;
+        background: #242424;
+        color: #fff;
+      }
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+      .sidebar h1 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.35;
+      }
+      .version {
+        margin: 10px 0 28px;
+        color: #aaa;
+        font-size: 13px;
+      }
+      nav a {
+        display: block;
+        margin: 4px 0;
+        padding: 9px 12px;
+        border-left: 3px solid transparent;
+        border-radius: 0 8px 8px 0;
+        color: #ddd;
+        text-decoration: none;
+      }
+      nav a:hover,
+      nav a:focus-visible {
+        border-left-color: var(--accent);
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+      }
+      .sidebar-note {
+        position: absolute;
+        right: 24px;
+        bottom: 28px;
+        left: 24px;
+        color: #aaa;
+        font-size: 12px;
+      }
+
+      main { padding: 56px clamp(28px, 5vw, 76px) 96px; }
+      .hero {
+        padding: clamp(28px, 5vw, 56px);
+        border-radius: 24px;
+        background: linear-gradient(135deg, #262020, #3d2222);
+        color: #fff;
+        box-shadow: var(--shadow);
+      }
+      .hero h2 {
+        max-width: 820px;
+        margin: 0 0 18px;
+        font-size: clamp(34px, 5vw, 60px);
+        line-height: 1.15;
+      }
+      .hero p { max-width: 760px; margin: 0; color: #ddd; font-size: 18px; }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .chip {
+        padding: 6px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 999px;
+        font-size: 13px;
+      }
+
+      section { scroll-margin-top: 24px; margin-top: 72px; }
+      section > h2 { margin: 0 0 10px; font-size: 32px; line-height: 1.3; }
+      .section-lead { max-width: 820px; margin: 0 0 28px; color: var(--muted); }
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .card {
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+      }
+      .card h3 { margin: 0 0 8px; font-size: 18px; }
+      .card p { margin: 0; color: var(--muted); }
+      .number {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 16px;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 800;
+      }
+
+      .callout {
+        margin: 22px 0;
+        padding: 18px 20px;
+        border-left: 5px solid var(--accent);
+        border-radius: 8px;
+        background: var(--accent-soft);
+      }
+      .callout strong { display: block; margin-bottom: 3px; }
+      .callout.warning { border-color: #d69000; background: var(--warning-bg); color: var(--warning); }
+
+      .step {
+        margin-top: 30px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+      }
+      .step-copy { padding: 26px 28px 20px; }
+      .step-title { display: flex; align-items: center; gap: 12px; }
+      .step-title .number { flex: 0 0 auto; margin: 0; }
+      .step h3 { margin: 0; font-size: 23px; }
+      .step p { margin: 12px 0 0; }
+      .expectation {
+        margin-top: 12px;
+        padding: 12px 14px;
+        border-radius: 9px;
+        background: var(--surface-soft);
+        color: #555;
+        font-size: 14px;
+      }
+      figure { margin: 0; border-top: 1px solid var(--line); background: #eee; }
+      figure img { width: 100%; height: auto; }
+      figcaption { padding: 10px 16px; background: #fff; color: var(--muted); font-size: 13px; }
+
+      .rules { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 12px; background: #fff; }
+      .rules th, .rules td { padding: 15px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+      .rules th { width: 28%; background: #fafafa; }
+      .rules tr:last-child th, .rules tr:last-child td { border-bottom: 0; }
+
+      details {
+        margin: 12px 0;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+      }
+      summary { padding: 17px 20px; cursor: pointer; font-weight: 700; }
+      details > div { padding: 0 20px 18px; color: var(--muted); }
+      details ul { margin-bottom: 0; }
+
+      .handoff {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .checklist { margin: 0; padding-left: 22px; }
+      .checklist li { margin: 7px 0; }
+
+      footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+
+      @media (max-width: 980px) {
+        .layout { grid-template-columns: 1fr; }
+        .sidebar { position: relative; height: auto; padding: 22px; }
+        .sidebar nav, .sidebar-note { display: none; }
+        main { padding-top: 28px; }
+        .cards { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 640px) {
+        main { padding: 18px 14px 60px; }
+        .hero { border-radius: 16px; }
+        section { margin-top: 52px; }
+        section > h2 { font-size: 27px; }
+        .handoff { grid-template-columns: 1fr; }
+        .rules, .rules tbody, .rules tr, .rules th, .rules td { display: block; width: 100%; }
+        .rules th { padding-bottom: 5px; border-bottom: 0; }
+        .rules td { padding-top: 5px; }
+      }
+      @media print {
+        body { background: #fff; font-size: 11pt; }
+        .layout { display: block; max-width: none; }
+        .sidebar { display: none; }
+        main { padding: 0; }
+        .hero { box-shadow: none; print-color-adjust: exact; }
+        section { break-before: auto; }
+        .step, .card, details { break-inside: avoid; box-shadow: none; }
+        details > div { display: block; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <p class="eyebrow">客服手冊</p>
+        <h1>功能名稱</h1>
+        <p class="version">適用版本與驗證日期</p>
+        <nav aria-label="手冊目錄">
+          <a href="#overview">功能概覽</a>
+          <a href="#before">使用前確認</a>
+          <a href="#steps">操作流程</a>
+          <a href="#rules">功能規則</a>
+          <a href="#faq">常見問題</a>
+          <a href="#handoff">轉交處理團隊</a>
+        </nav>
+        <p class="sidebar-note">內部客服使用<br />以已驗證的產品版本為準</p>
+      </aside>
+
+      <main>
+        <header class="hero">
+          <p class="eyebrow">CUSTOMER SERVICE GUIDE</p>
+          <h2>功能名稱<br />操作與問題排查</h2>
+          <p>用一句話說明本手冊協助客服處理的情境。</p>
+          <div class="meta">
+            <span class="chip">適用對象：待填寫</span>
+            <span class="chip">適用範圍：待填寫</span>
+          </div>
+        </header>
+
+        <section id="overview">
+          <h2>功能概覽</h2>
+          <p class="section-lead">說明功能用途與使用者能完成的主要任務。</p>
+          <div class="cards">
+            <article class="card"><span class="number">1</span><h3>主要能力</h3><p>填入已驗證的使用者可見行為。</p></article>
+          </div>
+          <div class="callout"><strong>客服說明重點</strong>填入最容易被誤解、且有查證依據的規則。</div>
+        </section>
+
+        <section id="before">
+          <h2>使用前確認</h2>
+          <p class="section-lead">列出實際會影響入口或操作的條件。</p>
+          <table class="rules"><tbody>
+            <tr><th>確認項目</th><td>填入已驗證的條件與檢查方式。</td></tr>
+          </tbody></table>
+        </section>
+
+        <section id="steps">
+          <h2>標準操作流程</h2>
+          <p class="section-lead">依使用者實際操作順序撰寫。</p>
+          <article class="step">
+            <div class="step-copy">
+              <div class="step-title"><span class="number">1</span><h3>步驟名稱</h3></div>
+              <p>寫出使用者應執行的操作。</p>
+              <div class="expectation"><strong>預期結果：</strong>寫出畫面可觀察到的結果。</div>
+            </div>
+            <figure><figcaption>圖 1｜交付前加入實際畫面與標註</figcaption></figure>
+          </article>
+        </section>
+
+        <section id="rules">
+          <h2>功能規則與限制</h2>
+          <table class="rules"><tbody>
+            <tr><th>規則名稱</th><td>只填入有證據、且影響客服判斷的規則。</td></tr>
+          </tbody></table>
+        </section>
+
+        <section id="faq">
+          <h2>常見問題與客服排查</h2>
+          <p class="section-lead">以使用者可描述的症狀作為問題標題。</p>
+          <details><summary>Q1：問題或症狀</summary><div>依序填入安全、可逆且可操作的檢查步驟。</div></details>
+        </section>
+
+        <section id="handoff">
+          <h2>何時轉交處理團隊</h2>
+          <p class="section-lead">列出已驗證且客服無法自行解決的情況。</p>
+          <div class="handoff">
+            <article class="card"><h3>建議轉交條件</h3><ul class="checklist"><li>填入具體條件。</li></ul></article>
+            <article class="card"><h3>需要蒐集的資訊</h3><ul class="checklist"><li>發生時間、操作步驟、環境與錯誤畫面。</li></ul></article>
+          </div>
+          <div class="callout warning"><strong>安全提醒</strong>依實際產品風險填寫，沒有特殊風險時可刪除此區塊。</div>
+        </section>
+
+        <footer>填入產品版本、查證來源、實際操作範圍與待確認事項。</footer>
+      </main>
+    </div>
+  </body>
+</html>
