@@ -1,0 +1,8 @@
+interface:
+  display_name: "客服 HTML 手冊"
+  short_description: "從功能分支逆向產出含標註截圖的客服 HTML 操作手冊"
+  brand_color: "#F73939"
+  default_prompt: "使用 $customer-service-html-manual，根據目前功能分支建立或更新客服 HTML 操作手冊。"
+
+policy:
+  allow_implicit_invocation: true
